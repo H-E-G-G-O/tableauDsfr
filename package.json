@@ -1,7 +1,7 @@
 {
   "name": "tableaudsfr",
   "version": "1.0.0",
-  "description": "protoptype de tableau avec le design du DSFR la DGFiP sur la base de https://observatoire.numerique.gouv.fr/observatoire/",
+  "description": "protoptype de tableau avec le design du DSFR pour la DGFiP sur la base de https://observatoire.numerique.gouv.fr/observatoire/",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
