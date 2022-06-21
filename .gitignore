@@ -41,6 +41,10 @@ build/Release
 node_modules/
 jspm_packages/
 
+#npm and yarn
+package-lock.json
+yarn.lock
+
 # TypeScript v1 declaration files
 typings/
 
