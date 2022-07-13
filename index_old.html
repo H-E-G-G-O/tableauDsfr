@@ -38,11 +38,16 @@
     <title>Accueil | Observatoire de la qualité</title>
 
     <style>
-      ul {
-        list-style: none;
+      .fr-h1,
+      .fr-h2,
+      .fr-h3,
+      .fr-h4,
+      .fr-h5,
+      .fr-h6 {
+        margin: 0;
       }
-      .row li {
-        margin-top: 0.2rem;
+      .table-header {
+        border-bottom: thin solid lightgray;
       }
 
       .row {
@@ -54,16 +59,12 @@
         margin-right: -20px;
       }
 
-      .header {
-        border-bottom: thin solid lightgray;
-        padding-bottom: 0;
-      }
-
-      @media only screen and (min-width: 600px) {
-        .fr-sr-only-lg {
-          color: silver;
-          font-weight: bold;
-        }
+      .fr-col,
+      .fr-col-1,
+      .fr-col-2,
+      .fr-col-4,
+      .fr-col-5 {
+        /* border: thin solid blue; */
       }
     </style>
   </head>
@@ -154,88 +155,110 @@
       </div>
     </header>
 
-    <main class="fr-container fr-container--fluid fr-mb-5v fr-mt-5v">
-      <h1 class="fr-h3">Titre de mon page:</h1>
-      <div id="tableauComplexe" class="fr-mb-5v fr-mt-5v">
-        <div class="header row fr-mb-5v">
-          <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-            <div class="fr-col-2">
-              <h2 class="fr-h6" id="demarche">Les démarches</h2>
-            </div>
-            <div class="fr-col-10">
-              <ul class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-                <li class="fr-col" id="entete.1">Entête 1</li>
-                <li class="fr-col" id="entete.2">Entête 2</li>
-                <li class="fr-col" id="entete.3">Entête 3</li>
-                <li class="fr-col" id="entete.4">Entête 4</li>
-                <li class="fr-col" id="entete.5">Entête 5</li>
-                <li class="fr-col" id="entete.6">Entête 6</li>
-                <li class="fr-col" id="details">Détails</li>
-              </ul>
-            </div>
+    <main>
+      <div class="fr-container fr-mb-5v fr-mt-5v">
+        <div
+          class="table-header fr-mb-5v fr-grid-row fr-grid-row--gutters fr-grid-row--left fr-grid-row--middle fr-text--xs fr-text--bold"
+        >
+          <div class="fr-col-2"><h1 class="fr-h6">Les démarches</h1></div>
+          <div class="fr-col" aria-hidden="true">Réalisable en ligne</div>
+          <div class="fr-col-1" aria-hidden="true">
+            Usagers satisfaits (/10)
           </div>
+          <div class="fr-col-1" aria-hidden="true" id="col.4">
+            Compatible mobile
+          </div>
+          <div class="fr-col-1" aria-hidden="true">Support accessible</div>
+          <div class="fr-col-1" aria-hidden="true">
+            Disponibilité et rapidité
+          </div>
+          <div class="fr-col-1" aria-hidden="true">
+            Intégration FranceConnect
+          </div>
+          <div class="fr-col-1" aria-hidden="true">
+            Prise en compte handicaps
+          </div>
+          <div class="fr-col-1" aria-hidden="true">Dites-le nous une fois</div>
+          <div class="fr-col-1" aria-hidden="true">Détails</div>
         </div>
         <div class="row">
-          <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-            <div class="fr-col-2">
-              <h2 class="fr-h6" id="demarche.1">Démarche 1</h2>
+          <div class="fr-mt-1v fr-grid-row fr-grid-row--gutters" role="list">
+            <div class="fr-col-2 fr-text--bold" role="listitem">
+              <h2 class="fr-h6" id="demarche.1">
+                Etablir un certificat de décès
+              </h2>
+              <span>Ministère des Solidarités et de la Santé</span>
             </div>
-            <div class="fr-col-10">
-              <ul class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 1: </span> Contenu 1
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 2: </span> Contenu 2
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 3: </span> Contenu 3
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 4: </span> Contenu 4
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 5: </span> Contenu 5
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 6: </span> Contenu 6
-                </li>
-                <li class="fr-col">
-                  <button
-                    class="fr-btn fr-btn--sm fr-btn--secondary fr-accordion__btn"
-                    aria-expanded="false"
-                    aria-controls="accordion.1"
-                    title="Plus de détails sur la démarche"
-                    aria-describedby="demarche details demarche.1"
-                    aria-labelledby="demarche details demarche.1"
-                  ></button>
-                </li>
-              </ul>
+            <div class="fr-col" role="listitem">
+              <p>
+                <span class="fr-sr-only">Réalisable en ligne</span> En cours de
+                déploiement local
+              </p>
+            </div>
+            <div class="fr-col-1" role="listitem">n/a</div>
+            <div class="fr-col-1" role="listitem">Oui</div>
+            <div class="fr-col-1" role="listitem" aria-describedby="col.4">
+              Partiel
+            </div>
+            <div class="fr-col-1" role="listitem">7</div>
+            <div class="fr-col-1" role="listitem">n/a</div>
+            <div class="fr-col-1" role="listitem">Partiel</div>
+            <div class="fr-col-1" role="listitem">0</div>
+            <div class="fr-col-1" role="listitem">
+              <button
+                class="fr-btn fr-btn--sm fr-btn--secondary fr-accordion__btn"
+                aria-expanded="false"
+                aria-controls="accordion-106"
+                title="Plus de détails sur la démarche "
+                aria-describedby="demarche.1"
+              ></button>
             </div>
           </div>
           <div class="fr-grid-row fr-grid-row--gutters">
             <div class="fr-col-12">
               <section class="fr-accordion">
-                <div class="fr-collapse" id="accordion.1">
+                <div class="fr-collapse" id="accordion-106">
                   <div class="row-details">
-                    <ul>
-                      <li>Date d'ouverture du service dématérialisé: 2022</li>
-                      <li>Volumétrie totale de la démarche: 645&nbsp;000</li>
-                      <li>
-                        Pourcentage de recours à la voie dématérialisée: 33%
-                      </li>
-                      <li>
-                        Lien:
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Date d'ouverture du service dématérialisé
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">2022</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Volumétrie totale de la démarche
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">645&nbsp;000</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Pourcentage de recours à la voie dématérialisée
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">33 %</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">Lien</div>
+                      <div class="fr-col-5 fr-col-offset-1">
                         <a href="https://sic.certdc.inserm.fr/" target="_blank"
                           >https://sic.certdc.inserm.fr/</a
                         >
-                      </li>
-                      <li>
-                        Catégories de publics concernés: Collectivités locales,
-                        Professionnels
-                      </li>
-                      <li>Pourcentage de conformité au RGAA: 62%</li>
-                    </ul>
+                      </div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Catégories de publics concernés
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">
+                        Collectivités locales, Professionnels
+                      </div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Pourcentage de conformité au RGAA
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">62 %</div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -243,66 +266,81 @@
           </div>
         </div>
         <div class="row">
-          <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-            <div class="fr-col-2">
-              <h2 class="fr-h6" id="demarche.2">Démarche 2</h2>
+          <div class="fr-mt-1v fr-grid-row fr-grid-row--gutters" role="list">
+            <div class="fr-col-2 fr-text--bold">
+              <h2 class="fr-h6" id="demarche.2">
+                Etablir un certificat de décès
+              </h2>
+              <span>Ministère des Solidarités et de la Santé</span>
             </div>
-            <div class="fr-col-10">
-              <ul class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 1: </span> Contenu 1
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 2: </span> Contenu 2
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 3: </span> Contenu 3
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 4: </span> Contenu 4
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 5: </span> Contenu 5
-                </li>
-                <li class="fr-col">
-                  <span class="fr-sr-only-lg">Entête 6: </span> Contenu 6
-                </li>
-                <li class="fr-col">
-                  <button
-                    class="fr-btn fr-btn--sm fr-btn--secondary fr-accordion__btn"
-                    aria-expanded="false"
-                    aria-controls="accordion.2"
-                    title="Plus de détails sur la démarche"
-                    aria-describedby="demarche details demarche.2"
-                    aria-labelledby="demarche details demarche.2"
-                  ></button>
-                </li>
-              </ul>
+            <div class="fr-col" role="listitem">
+              <p>
+                <span class="fr-sr-only">Réalisable en ligne</span>
+                En cours de déploiement local
+              </p>
+            </div>
+            <div class="fr-col-1" role="listitem">n/a</div>
+            <div class="fr-col-1" role="listitem">Oui</div>
+            <div class="fr-col-1" role="listitem">Partiel</div>
+            <div class="fr-col-1" role="listitem">7</div>
+            <div class="fr-col-1" role="listitem">n/a</div>
+            <div class="fr-col-1" role="listitem">Partiel</div>
+            <div class="fr-col-1" role="listitem">0</div>
+            <div class="fr-col-1" role="listitem">
+              <button
+                class="fr-btn fr-btn--sm fr-btn--secondary fr-accordion__btn"
+                aria-expanded="false"
+                aria-controls="accordion-107"
+                title="Plus de détails sur la démarche"
+                aria-describedby="demarche.2"
+              ></button>
             </div>
           </div>
           <div class="fr-grid-row fr-grid-row--gutters">
             <div class="fr-col-12">
               <section class="fr-accordion">
-                <div class="fr-collapse" id="accordion.2">
+                <div class="fr-collapse" id="accordion-107">
                   <div class="row-details">
-                    <ul>
-                      <li>Date d'ouverture du service dématérialisé: 2022</li>
-                      <li>Volumétrie totale de la démarche: 645&nbsp;000</li>
-                      <li>
-                        Pourcentage de recours à la voie dématérialisée: 33%
-                      </li>
-                      <li>
-                        Lien:
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Date d'ouverture du service dématérialisé
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">2022</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Volumétrie totale de la démarche
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">645&nbsp;000</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Pourcentage de recours à la voie dématérialisée
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">33 %</div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">Lien</div>
+                      <div class="fr-col-5 fr-col-offset-1">
                         <a href="https://sic.certdc.inserm.fr/" target="_blank"
                           >https://sic.certdc.inserm.fr/</a
                         >
-                      </li>
-                      <li>
-                        Catégories de publics concernés: Collectivités locales,
-                        Professionnels
-                      </li>
-                      <li>Pourcentage de conformité au RGAA: 62%</li>
-                    </ul>
+                      </div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Catégories de publics concernés
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">
+                        Collectivités locales, Professionnels
+                      </div>
+                    </div>
+                    <div class="fr-grid-row fr-grid-row--gutters">
+                      <div class="fr-col-4">
+                        Pourcentage de conformité au RGAA
+                      </div>
+                      <div class="fr-col-5 fr-col-offset-1">62 %</div>
+                    </div>
                   </div>
                 </div>
               </section>
